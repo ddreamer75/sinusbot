@@ -159,6 +159,7 @@ registerPlugin({
 	function performAction() {
 		var channel = backend.getCurrentChannel();
 		engine.log('TOT-Ausgelöst. Aktion wird ausgeführt.');
+		channel.chat('[b][color=red] !!! >>> [u]TOT Ausgelöst[/u] <<< !!! - ' + channel.name() + ' wird für ' +  (TOTOUT/1000) + ' Sekunden stummgeschaltet![/color][/b]');
 		if (media.playURL(config.Track["url"])) {
 			channel.update({
 				neededTalkPower: 5000, // Setze 'needetTalkPower' auf 5000 um Channel zu stumm zu schalten
